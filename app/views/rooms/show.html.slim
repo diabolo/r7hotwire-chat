@@ -1,0 +1,20 @@
+- room = @room
+div id="#{dom_id(room)}"
+  h1 Room: #{room.name}
+
+  / p
+  /   strong Posted:
+  /   =< time_tag room.created_at, "data-local": "time-ago" 
+
+  / p
+  /   strong= pluralize room.messages.count, "message" 
+
+  / p
+  /   strong Messages:
+  /   == room.messages
+
+  => link_to 'Show', room
+  =< link_to 'Edit', edit_room_path(room)
+  =< link_to 'Back', rooms_path
+  =< link_to 'Destroy', room, data: { confirm: 'Are you sure?' }, method: :delete
+
