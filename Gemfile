@@ -69,6 +69,7 @@ gem "slim-rails"
 group :development, :test do
   gem "rspec-rails"
   gem "capybara"
+  gem "faker"
 end
 
 group :test do
