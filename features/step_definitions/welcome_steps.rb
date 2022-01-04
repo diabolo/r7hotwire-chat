@@ -4,5 +4,8 @@ World WelcomeSH
 
 When 'I visit the application' do
   visit root_path
-  binding.b
+end
+
+Then 'I should see the rooms' do
+  expect(page).to have_css('.rooms')
 end
