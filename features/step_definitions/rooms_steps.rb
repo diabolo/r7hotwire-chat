@@ -1,4 +1,7 @@
 module RoomsSH
+  def create_room
+    Room.create!(name: Faker::Name.name)
+  end
 end
 World RoomsSH
 
@@ -11,6 +14,14 @@ World FormSH
 
 Given 'I am viewing the rooms' do
   visit root_path
+end
+
+Given 'I am in the room' do
+  visit room_path @room
+end
+
+Given 'there is a room' do
+  @room = create_room
 end
 
 When 'I create a room' do
