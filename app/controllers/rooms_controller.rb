@@ -3,17 +3,28 @@ class RoomsController < ApplicationController
     load_rooms
   end
 
-  def new
-    build_room
-  end
-
   def show
     load_room
+  end
+
+  def new
+    build_room
   end
 
   def create
     build_room
     save_room or render 'new'
+  end
+
+  def edit
+    load_room
+    build_room
+  end
+
+  def update
+    load_room
+    build_room
+    save_room or render 'edit'
   end
 
   private
