@@ -1,6 +1,9 @@
 - room = @room
 div.room id="#{dom_id(room)}"
-  h1 Room: #{room.name}
+  h1 
+    |
+      Room:
+    span.room__name<= room.name
 
   / p
   /   strong Posted:

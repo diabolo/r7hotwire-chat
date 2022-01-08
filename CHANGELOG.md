@@ -9,6 +9,7 @@ and this project adheres to
   - [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+- Use a turbo frame #8
 - Add simplecss via cdn PR#5
 - Add messages PR#4 
 - Create a room PR#3
