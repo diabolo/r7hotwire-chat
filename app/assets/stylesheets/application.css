@@ -19,3 +19,8 @@
   color: grey;
   text-align: right;
 }
+
+turbo-frame {
+  display: block;
+  border: 1px solid blue;
+}
